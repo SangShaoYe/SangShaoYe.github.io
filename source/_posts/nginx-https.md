@@ -6,6 +6,8 @@ tags: NGINX
 
 nginx关于https的配置
 
+author：李文良
+
 <!-- more -->
 
 首发于:

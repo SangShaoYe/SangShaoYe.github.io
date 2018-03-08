@@ -5,6 +5,7 @@ tags: JavaSript
 ---
 
 关于console调试的一些小方法。
+
 author：桑景瑞
 <!-- more -->
 ---
