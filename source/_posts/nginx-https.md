@@ -1,7 +1,7 @@
 ---
 title: nginx_https
 date: 2018-03-06 10:37:52
-tags: nginx
+tags: NGINX
 ---
 
 nginx关于https的配置
