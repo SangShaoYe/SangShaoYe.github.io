@@ -5,7 +5,7 @@ tags: JavaSript
 ---
 
 ECMA6的部分新特性的讲解
-
+author：桑景瑞
 <!-- more -->
 
 # ECMA6
