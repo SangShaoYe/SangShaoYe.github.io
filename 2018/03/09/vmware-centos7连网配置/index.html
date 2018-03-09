@@ -5,19 +5,19 @@
   
 
   
-  <title>console | My Blogs</title>
+  <title>vmware_centos7连网配置 | My Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于console调试的一些小方法。 author：桑景瑞">
-<meta name="keywords" content="JavaSript">
+  <meta name="description" content="vmware_centos7连网配置 author：李文良">
+<meta name="keywords" content="LIUNX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="console">
-<meta property="og:url" content="https://sangshaoye.github.io/2018/03/06/console/index.html">
+<meta property="og:title" content="vmware_centos7连网配置">
+<meta property="og:url" content="https://sangshaoye.github.io/2018/03/09/vmware-centos7连网配置/index.html">
 <meta property="og:site_name" content="My Blogs">
-<meta property="og:description" content="关于console调试的一些小方法。 author：桑景瑞">
-<meta property="og:updated_time" content="2018-03-08T08:19:14.343Z">
+<meta property="og:description" content="vmware_centos7连网配置 author：李文良">
+<meta property="og:updated_time" content="2018-03-09T08:40:06.948Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="console">
-<meta name="twitter:description" content="关于console调试的一些小方法。 author：桑景瑞">
+<meta name="twitter:title" content="vmware_centos7连网配置">
+<meta name="twitter:description" content="vmware_centos7连网配置 author：李文良">
   
     <link rel="alternate" href="/atom.xml" title="My Blogs" type="application/atom+xml">
   
@@ -68,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-console" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-vmware-centos7连网配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/03/06/console/" class="article-date">
-  <time datetime="2018-03-06T01:15:51.000Z" itemprop="datePublished">2018-03-06</time>
+    <a href="/2018/03/09/vmware-centos7连网配置/" class="article-date">
+  <time datetime="2018-03-09T08:35:58.000Z" itemprop="datePublished">2018-03-09</time>
 </a>
     
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      console
+      vmware_centos7连网配置
     </h1>
   
 
@@ -90,22 +90,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>关于console调试的一些小方法。</p>
-<p>author：桑景瑞</p>
-<a id="more"></a>
-<hr>
-<p>console 方法<br>当你想要像大牛一样快速的调试时，console API 是个不错的解决方案。下面是几个能帮你大幅简化调试并节约时间的例子。<br>输出堆栈信息<br>我发现最常见的一个问题是人们在追踪事件以及寻找某个函数的调用位置时经常迷路。<br>我推荐使用 console.trace() 方法！你可以通过这个简单的方法来跟踪你的调用信息，详细的了解它从哪里开始，以及整个生命周期。</p>
-<p><figure name="7856" id="7856"> <canvas width="75" height="47"></canvas> </figure></p>
-<p>祝天下女神节日快乐！<br>——–未完——–</p>
-<hr>
+        <p>vmware_centos7连网配置</p>
+<p>author：李文良<br><a id="more"></a></p>
+<p>首发于博客:</p>
+<h2 id="勘误-https-github-com-icngor-icngor-github-io-issues-2"><a href="#勘误-https-github-com-icngor-icngor-github-io-issues-2" class="headerlink" title="勘误:https://github.com/icngor/icngor.github.io/issues/2"></a>勘误:<a href="https://github.com/icngor/icngor.github.io/issues/2" target="_blank" rel="noopener">https://github.com/icngor/icngor.github.io/issues/2</a></h2><p>vmware_centos7连网配置</p>
+<h2 id="1-使用桥接模式-相当于局域网一台真实主机"><a href="#1-使用桥接模式-相当于局域网一台真实主机" class="headerlink" title="1. 使用桥接模式(相当于局域网一台真实主机)"></a>1. 使用桥接模式(相当于局域网一台真实主机)</h2><ul>
+<li>虚拟机-&gt;设置-&gt;网络适配器-&gt;网络连接-&gt;桥接模式</li>
+<li>编辑-&gt;虚拟网络编辑器-&gt;vMnet信息-&gt;桥接模式-&gt;选择可以的网卡</li>
+</ul>
+<h2 id="2-Centos7配置"><a href="#2-Centos7配置" class="headerlink" title="2. Centos7配置"></a>2. Centos7配置</h2><p>IP地址配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br><span class="line"></span><br><span class="line">TYPE=Ethernet</span><br><span class="line">PROXY_METHOD=static # 静态IP</span><br><span class="line">BROWSER_ONLY=no</span><br><span class="line">DEFROUTE=yes</span><br><span class="line">IPV4_FAILURE_FATAL=no</span><br><span class="line">IPV6INIT=yes</span><br><span class="line">IPV6_AUTOCONF=yes</span><br><span class="line">IPV6_DEFROUTE=yes</span><br><span class="line">IPV6_FAILURE_FATAL=no</span><br><span class="line">IPV6_ADDR_GEN_MODE=stable-privacy</span><br><span class="line">NAME=ens33</span><br><span class="line">UUID=aad1e567-65cc-4144-9dc3-8de0d2aac6bd</span><br><span class="line">DEVICE=ens33</span><br><span class="line">ONBOOT=yes # 系统启动时激活网卡</span><br><span class="line">IPADDR=192.168.0.249</span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line">GATEWAY=192.168.0.1</span><br></pre></td></tr></table></figure></p>
+<p>dns配置 &amp; 重启网络<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vi /etc/resolv.conf</span><br><span class="line">nameserver 8.8.8.8</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# systemctl restart network</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sangshaoye.github.io/2018/03/06/console/" data-id="cjejoxy9800052s555lqly0tr" class="article-share-link">Teilen</a>
+      <a data-url="https://sangshaoye.github.io/2018/03/09/vmware-centos7连网配置/" data-id="cjejoxy9500032s55zn246088" class="article-share-link">Teilen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSript/">JavaSript</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LIUNX/">LIUNX</a></li></ul>
 
     </footer>
   </div>
@@ -113,19 +115,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/03/06/nginx-https/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          nginx_https
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/02/24/status/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/03/08/Java架构师计划/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">status</div>
+      <div class="article-nav-title">Java架构师计划</div>
     </a>
   
 </nav>
