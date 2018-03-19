@@ -1,7 +1,7 @@
 ---
 title: vue中js生成的html无样式
 date: 2018-03-19 16:44:09
-tags: JavaSript
+tags: 前端日常问题
 ---
 
 vue中js生成的html无样式
