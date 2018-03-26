@@ -1,7 +1,7 @@
 ---
 title: PS1
 date: 2018-03-26 11:45:51
-tags: Linux
+tags: LIUNX
 ---
 首发于博客:
 勘误: https://github.com/icngor/icngor.github.io/issues/3
