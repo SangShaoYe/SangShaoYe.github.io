@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>PS1 | My Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首发于博客:勘误: https://github.com/icngor/icngor.github.io/issues/3 author：李文良">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PS1">
+<meta property="og:url" content="https://sangshaoye.github.io/2018/03/26/PS1/index.html">
+<meta property="og:site_name" content="My Blogs">
+<meta property="og:description" content="首发于博客:勘误: https://github.com/icngor/icngor.github.io/issues/3 author：李文良">
+<meta property="og:updated_time" content="2018-03-26T03:47:06.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PS1">
+<meta name="twitter:description" content="首发于博客:勘误: https://github.com/icngor/icngor.github.io/issues/3 author：李文良">
+  
+    <link rel="alternate" href="/atom.xml" title="My Blogs" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">My Blogs</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">A man can&#39;t ride your back unless it is bent！</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sangshaoye.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-PS1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/26/PS1/" class="article-date">
+  <time datetime="2018-03-26T03:45:51.000Z" itemprop="datePublished">2018-03-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PS1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首发于博客:<br>勘误: <a href="https://github.com/icngor/icngor.github.io/issues/3" target="_blank" rel="noopener">https://github.com/icngor/icngor.github.io/issues/3</a></p>
+<p>author：李文良<br><a id="more"></a></p>
+<p>首发于博客:<br>勘误: <a href="https://github.com/icngor/icngor.github.io/issues/3" target="_blank" rel="noopener">https://github.com/icngor/icngor.github.io/issues/3</a></p>
+<h1 id="Linux-命令提示符自定义"><a href="#Linux-命令提示符自定义" class="headerlink" title="Linux 命令提示符自定义"></a>Linux 命令提示符自定义</h1><h2 id="PS1"><a href="#PS1" class="headerlink" title="PS1"></a>PS1</h2><p>命令提示符的样式又<code>PS1</code>变量控制，可以使用<code>echo $PS1</code>查看。</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><table>
+<thead>
+<tr>
+<th>序列</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\a</td>
+<td>ASCII 响铃字符（也可以键入 \007）</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>“Wed Sep 06” 格式的日期</td>
+</tr>
+<tr>
+<td>\e</td>
+<td>ASCII 转义字符（也可以键入 \033）</td>
+</tr>
+<tr>
+<td>\h</td>
+<td>主机名的第一部分（如 “mybox”）</td>
+</tr>
+<tr>
+<td>\H</td>
+<td>主机的全称（如 “mybox.mydomain.com”）</td>
+</tr>
+<tr>
+<td>\j</td>
+<td>在此shell中通过按 ^Z 挂起的进程数</td>
+</tr>
+<tr>
+<td>\l</td>
+<td>此 shell 的终端设备名（如 “ttyp4”）</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行符</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车符</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>shell 的名称（如 “bash”）</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>24 小时制时间（如 “23:01:01”）</td>
+</tr>
+<tr>
+<td>\T</td>
+<td>12 小时制时间（如 “11:01:01”）</td>
+</tr>
+<tr>
+<td>\@</td>
+<td>带有 am/pm 的 12 小时制时间</td>
+</tr>
+<tr>
+<td>\u</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>bash 的版本（如 2.04）</td>
+</tr>
+<tr>
+<td>\V</td>
+<td>Bash 版本（包括补丁级别）</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>当前工作目录（如 “/home/drobbins”）</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>当前工作目录的“基名 (basename)”（如 “drobbins”）</td>
+</tr>
+<tr>
+<td>!</td>
+<td>当前命令在历史缓冲区中的位置</td>
+</tr>
+<tr>
+<td>#</td>
+<td>命令编号（只要您键入内容，它就会在每次提示时累加）</td>
+</tr>
+<tr>
+<td>\$</td>
+<td>如果您不是超级用户 (root)，则插入一个 “$”；如果您是超级用户，则显示一个 “#”</td>
+</tr>
+<tr>
+<td>\xxx</td>
+<td>插入一个用三位数 xxx（用零代替未使用的数字，如 “\007”）表示的 ASCII 字符</td>
+</tr>
+<tr>
+<td>\</td>
+<td>反斜杠</td>
+</tr>
+<tr>
+<td>[</td>
+<td>这个序列应该出现在不移动光标的字符序列（如颜色转义序列）之前。它使 bash 能够正确计算自动换行。</td>
+</tr>
+<tr>
+<td>]</td>
+<td>这个序列应该出现在非打印字符序列之后。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="自定义颜色"><a href="#自定义颜色" class="headerlink" title="自定义颜色"></a>自定义颜色</h2><p>bash中有其自己的配色方案，格式如下：<br><code>\[\e[F;B;Cm\]</code></p>
+<h3 id="1-命令换行"><a href="#1-命令换行" class="headerlink" title="1.命令换行"></a>1.命令换行</h3><p>其中，<code>\[</code>与<code>\]</code>是保证其内的非打印字符不占用行上的任何空间，这样就能使自动换行后的颜色设置正常工作了；<br><code>\e[</code>与<code>m</code>之间的内容表示设置颜色，F是前景色，B是背景色，C是代码 多个颜色用分号隔开,但F、B、C顺序可变，这是因为他们的数值不冲突。</p>
+<h3 id="2-特殊的颜色设置格式："><a href="#2-特殊的颜色设置格式：" class="headerlink" title="2.特殊的颜色设置格式："></a>2.特殊的颜色设置格式：</h3><p><code>\e[0m</code>、<code>\e[m</code>都是通知终端将颜色（前景、背景、加粗）设置重置为默认。</p>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>OFF</td>
+</tr>
+<tr>
+<td>1</td>
+<td>高亮显示</td>
+</tr>
+<tr>
+<td>4</td>
+<td>underline</td>
+</tr>
+<tr>
+<td>5</td>
+<td>闪烁</td>
+</tr>
+<tr>
+<td>7</td>
+<td>反白显示</td>
+</tr>
+<tr>
+<td>8</td>
+<td>不可见</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-前后景颜色表："><a href="#3-前后景颜色表：" class="headerlink" title="3.前后景颜色表："></a>3.前后景颜色表：</h3><table>
+<thead>
+<tr>
+<th>前景</th>
+<th>背景</th>
+<th>颜色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30</td>
+<td>40</td>
+<td>黑色</td>
+</tr>
+<tr>
+<td>31</td>
+<td>41</td>
+<td>紅色</td>
+</tr>
+<tr>
+<td>32</td>
+<td>42</td>
+<td>绿色</td>
+</tr>
+<tr>
+<td>33</td>
+<td>43</td>
+<td>黄色</td>
+</tr>
+<tr>
+<td>34</td>
+<td>44</td>
+<td>蓝色</td>
+</tr>
+<tr>
+<td>35</td>
+<td>45</td>
+<td>紫红色</td>
+</tr>
+<tr>
+<td>36</td>
+<td>46</td>
+<td>青蓝色</td>
+</tr>
+<tr>
+<td>37</td>
+<td>47</td>
+<td>白色</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sangshaoye.github.io/2018/03/26/PS1/" data-id="cjf7ozpwx0000ok55n13bhcte" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/22/放大镜/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">放大镜</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSript/">JavaSript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LIUNX/">LIUNX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NGINX/">NGINX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端日常问题/">前端日常问题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/JavaSript/" style="font-size: 20px;">JavaSript</a> <a href="/tags/LIUNX/" style="font-size: 10px;">LIUNX</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/NGINX/" style="font-size: 10px;">NGINX</a> <a href="/tags/前端日常问题/" style="font-size: 10px;">前端日常问题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/26/PS1/">PS1</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/22/放大镜/">放大镜</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/19/vue中js生成的html无样式/">vue中js生成的html无样式</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/19/promise/">promise</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/09/vmware-centos7连网配置/">vmware_centos7连网配置</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 SangJingRui<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
