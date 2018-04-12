@@ -55,5 +55,4 @@ console 方法
 <figure name="7f88" id="7f88"> <canvas width="75" height="32"></canvas> 
 
  <figcaption> 这部分在 Console 选项卡中也可以完成。 </figcaption> </figure>
- 【完】
 ---
