@@ -12,7 +12,6 @@ author：李文良
 ## 流程:
 计划 -> 编写(有道云笔记) ->发布到icngor.github.io -> 其他平台引用
 
-
 ## Java (Java编程基础必备)
 - Java编程思想(2018)
 - Java Tutorial(2018) :fa-square-o: 
