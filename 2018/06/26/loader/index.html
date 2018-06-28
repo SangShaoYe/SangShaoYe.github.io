@@ -5,19 +5,19 @@
   
 
   
-  <title>vue中js生成的html无样式 | My Blogs</title>
+  <title>loader | My Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vue中js生成的html无样式 author：桑景瑞">
-<meta name="keywords" content="前端日常问题">
+  <meta name="description" content="webapck配置中loader是做什么的？ author：桑景瑞">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue中js生成的html无样式">
-<meta property="og:url" content="https://sangshaoye.github.io/2018/03/19/vue中js生成的html无样式/index.html">
+<meta property="og:title" content="loader">
+<meta property="og:url" content="https://sangshaoye.github.io/2018/06/26/loader/index.html">
 <meta property="og:site_name" content="My Blogs">
-<meta property="og:description" content="vue中js生成的html无样式 author：桑景瑞">
-<meta property="og:updated_time" content="2018-03-22T00:56:58.164Z">
+<meta property="og:description" content="webapck配置中loader是做什么的？ author：桑景瑞">
+<meta property="og:updated_time" content="2018-06-28T05:53:16.479Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue中js生成的html无样式">
-<meta name="twitter:description" content="vue中js生成的html无样式 author：桑景瑞">
+<meta name="twitter:title" content="loader">
+<meta name="twitter:description" content="webapck配置中loader是做什么的？ author：桑景瑞">
   
     <link rel="alternate" href="/atom.xml" title="My Blogs" type="application/atom+xml">
   
@@ -68,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-vue中js生成的html无样式" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-loader" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/03/19/vue中js生成的html无样式/" class="article-date">
-  <time datetime="2018-03-19T08:44:09.000Z" itemprop="datePublished">2018-03-19</time>
+    <a href="/2018/06/26/loader/" class="article-date">
+  <time datetime="2018-06-26T11:31:26.000Z" itemprop="datePublished">2018-06-26</time>
 </a>
     
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue中js生成的html无样式
+      loader
     </h1>
   
 
@@ -90,19 +90,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>vue中js生成的html无样式</p>
+        <p>webapck配置中loader是做什么的？</p>
 <p>author：桑景瑞<br><a id="more"></a></p>
-<p>vue中，模块化开发，相信很多人都会在.vue文件中的style标签加上scoped，为了css不相互冲突，<br>但是发现，在js生成的html上没有css效果，吧scoped删除就好了，这样的话，就要去找scoped的概念了，发现scoped是使css只在本组件中生效，然而为什么js生成的不生效呢，<br>因为js渲染的html属于本组件的子组件，不明白？对本人生效，对本人的儿子不生效哦，明白了吧。</p>
-<p>解决办法：首先，想使用scoped的特性，所以scoped保留，那么，对于js渲染的html的css单独写一个css文件，完了就import进去，就ok了，但是注意哦，这里的css可能会有冲突哦，所以要谨慎使用节点名称。</p>
-<p>【完】</p>
+<p>loader 用于对模块的源代码进行转换。loader 可以使你在 import 或”加载”模块时预处理文件。因此，loader 类似于其他构建工具中“任务(task)”，并提供了处理前端构建步骤的强大方法。loader 可以将文件从不同的语言（如 TypeScript）转换为 JavaScript，或将内联图像转换为 data URL。loader 甚至允许你直接在 JavaScript 模块中 import CSS文件！</p>
+<p>示例<br>例如，你可以使用 loader 告诉 webpack 加载 CSS 文件，或者将 TypeScript 转为 JavaScript。为此，首先安装相对应的 loader：</p>
+<p>npm install –save-dev css-loader<br>npm install –save-dev ts-loader<br>然后指示 webpack 对每个 .css 使用 css-loader，以及对所有 .ts 文件使用 ts-loader：</p>
+<p>webpack.config.js</p>
+<p>module.exports = {<br>  module: {<br>    rules: [<br>      { test: /.css$/, use: ‘css-loader’ },<br>      { test: /.ts$/, use: ‘ts-loader’ }<br>    ]<br>  }<br>};<br>使用 loader<br>在你的应用程序中，有三种使用 loader 的方式：</p>
+<p>配置（推荐）：在 webpack.config.js 文件中指定 loader。<br>内联：在每个 import 语句中显式指定 loader。<br>CLI：在 shell 命令中指定它们。<br>配置[Configuration]<br>module.rules 允许你在 webpack 配置中指定多个 loader。 这是展示 loader 的一种简明方式，并且有助于使代码变得简洁。同时让你对各个 loader 有个全局概览：</p>
+<p>  module: {<br>    rules: [<br>      {<br>        test: /.css$/,<br>        use: [<br>          { loader: ‘style-loader’ },<br>          {<br>            loader: ‘css-loader’,<br>            options: {<br>              modules: true<br>            }<br>          }<br>        ]<br>      }<br>    ]<br>  }<br>内联<br>可以在 import 语句或任何等效于 “import” 的方式中指定 loader。使用 ! 将资源中的 loader 分开。分开的每个部分都相对于当前目录解析。</p>
+<p>import Styles from ‘style-loader!css-loader?modules!./styles.css’;<br>通过前置所有规则及使用 !，可以对应覆盖到配置中的任意 loader。</p>
+<p>选项可以传递查询参数，例如 ?key=value&amp;foo=bar，或者一个 JSON 对象，例如 ?{“key”:”value”,”foo”:”bar”}。</p>
+<p>尽可能使用 module.rules，因为这样可以减少源码中的代码量，并且可以在出错时，更快地调试和定位 loader 中的问题。<br>CLI<br>你也可以通过 CLI 使用 loader：</p>
+<p>webpack –module-bind jade-loader –module-bind ‘css=style-loader!css-loader’<br>这会对 .jade 文件使用 jade-loader，对 .css 文件使用 style-loader 和 css-loader。</p>
+<p>loader 特性<br>loader 支持链式传递。能够对资源使用流水线(pipeline)。一组链式的 loader 将按照相反的顺序执行。loader 链中的第一个 loader 返回值给下一个 loader。在最后一个 loader，返回 webpack 所预期的 JavaScript。<br>loader 可以是同步的，也可以是异步的。<br>loader 运行在 Node.js 中，并且能够执行任何可能的操作。<br>loader 接收查询参数。用于对 loader 传递配置。<br>loader 也能够使用 options 对象进行配置。<br>除了使用 package.json 常见的 main 属性，还可以将普通的 npm 模块导出为 loader，做法是在 package.json 里定义一个 loader 字段。<br>插件(plugin)可以为 loader 带来更多特性。<br>loader 能够产生额外的任意文件。<br>loader 通过（loader）预处理函数，为 JavaScript 生态系统提供了更多能力。 用户现在可以更加灵活地引入细粒度逻辑，例如压缩、打包、语言翻译和其他更多。</p>
+<p>解析 loader<br>loader 遵循标准的模块解析。多数情况下，loader 将从模块路径（通常将模块路径认为是 npm install, node_modules）解析。</p>
+<p>loader 模块需要导出为一个函数，并且使用 Node.js 兼容的 JavaScript 编写。通常使用 npm 进行管理，但是也可以将自定义 loader 作为应用程序中的文件。按照约定，loader 通常被命名为 xxx-loader（例如 json-loader）。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sangshaoye.github.io/2018/03/19/vue中js生成的html无样式/" data-id="cjhad4b9m000bvs550exbjs01" class="article-share-link">Share</a>
+      <a data-url="https://sangshaoye.github.io/2018/06/26/loader/" data-id="cjiy4w5dz0000xk553enizn3n" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端日常问题/">前端日常问题</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
 
     </footer>
   </div>
@@ -110,19 +121,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/03/19/angular/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/06/28/webapck配置中chunkname/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          angular搭建
+          chunkname
         
       </div>
     </a>
   
   
-    <a href="/2018/03/19/promise/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/03/26/PS1/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">promise</div>
+      <div class="article-nav-title">PS1</div>
     </a>
   
 </nav>
