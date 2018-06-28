@@ -5,14 +5,19 @@
   
 
   
-  <title>Tag: JavaSript | My Blogs</title>
+  <title>plugins | My Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="My Blogs">
-<meta property="og:url" content="https://sangshaoye.github.io/tags/JavaSript/index.html">
+  <meta name="description" content="plugins相关的内容，概括，不详细 author：桑景瑞">
+<meta name="keywords" content="webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="plugins">
+<meta property="og:url" content="https://sangshaoye.github.io/2018/06/15/插件(plugins)/index.html">
 <meta property="og:site_name" content="My Blogs">
+<meta property="og:description" content="plugins相关的内容，概括，不详细 author：桑景瑞">
+<meta property="og:updated_time" content="2018-06-28T06:32:00.384Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My Blogs">
+<meta name="twitter:title" content="plugins">
+<meta name="twitter:description" content="plugins相关的内容，概括，不详细 author：桑景瑞">
   
     <link rel="alternate" href="/atom.xml" title="My Blogs" type="application/atom+xml">
   
@@ -63,135 +68,79 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/22/放大镜/" class="archive-article-date">
-  <time datetime="2018-03-22T07:18:43.000Z" itemprop="datePublished">Mar 22</time>
+        <section id="main"><article id="post-插件(plugins)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/15/插件(plugins)/" class="article-date">
+  <time datetime="2018-06-15T13:43:11.000Z" itemprop="datePublished">2018-06-15</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/22/放大镜/">放大镜</a>
+    <h1 class="article-title" itemprop="name">
+      plugins
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/19/promise/" class="archive-article-date">
-  <time datetime="2018-03-19T03:34:04.000Z" itemprop="datePublished">Mar 19</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/19/promise/">promise</a>
-    </h1>
-  
+        <p>plugins相关的内容，概括，不详细</p>
+<p>author：桑景瑞<br><a id="more"></a></p>
+<p>插件是 webpack 的支柱功能。webpack 自身也是构建于，你在 webpack 配置中用到的相同的插件系统之上！</p>
+<p>插件目的在于解决 loader 无法实现的其他事。</p>
+<p>剖析<br>webpack 插件是一个具有 apply 属性的 JavaScript 对象。apply 属性会被 webpack compiler 调用，并且 compiler 对象可在整个编译生命周期访问。</p>
+<p>ConsoleLogOnBuildWebpackPlugin.js</p>
+<p>const pluginName = ‘ConsoleLogOnBuildWebpackPlugin’;</p>
+<p>class ConsoleLogOnBuildWebpackPlugin {<br>    apply(compiler) {<br>        compiler.hooks.run.tap(pluginName, compilation =&gt; {<br>            console.log(“webpack 构建过程开始！”);<br>        });<br>    }<br>}<br>compiler hook 的 tap 方法的第一个参数，应该是驼峰式命名的插件名称。建议为此使用一个常量，以便它可以在所有 hook 中复用。</p>
+<p>用法<br>由于插件可以携带参数/选项，你必须在 webpack 配置中，向 plugins 属性传入 new 实例。</p>
+<p>根据你的 webpack 用法，这里有多种方式使用插件。</p>
+<p>配置<br>webpack.config.js</p>
+<p>const HtmlWebpackPlugin = require(‘html-webpack-plugin’); //通过 npm 安装<br>const webpack = require(‘webpack’); //访问内置的插件<br>const path = require(‘path’);</p>
+<p>const config = {<br>  entry: ‘./path/to/my/entry/file.js’,<br>  output: {<br>    filename: ‘my-first-webpack.bundle.js’,<br>    path: path.resolve(__dirname, ‘dist’)<br>  },<br>  module: {<br>    rules: [<br>      {<br>        test: /.(js|jsx)$/,<br>        use: ‘babel-loader’<br>      }<br>    ]<br>  },<br>  plugins: [<br>    new webpack.optimize.UglifyJsPlugin(),<br>    new HtmlWebpackPlugin({template: ‘./src/index.html’})<br>  ]<br>};</p>
+<p>module.exports = config;<br>Node API<br>即便使用 Node API，用户也应该在配置中传入 plugins 属性。compiler.apply 并不是推荐的使用方式。<br>some-node-script.js</p>
+<p>  const webpack = require(‘webpack’); //访问 webpack 运行时(runtime)<br>  const configuration = require(‘./webpack.config.js’);</p>
+<p>  let compiler = webpack(configuration);<br>  compiler.apply(new webpack.ProgressPlugin());</p>
+<p>  compiler.run(function(err, stats) {<br>    // …<br>  });</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/06/ecma6/" class="archive-article-date">
-  <time datetime="2018-03-06T07:22:43.000Z" itemprop="datePublished">Mar 6</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/06/ecma6/">ECMA6</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/06/console/" class="archive-article-date">
-  <time datetime="2018-03-06T01:15:51.000Z" itemprop="datePublished">Mar 6</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sangshaoye.github.io/2018/06/15/插件(plugins)/" data-id="cjiy68x6n0000o45520l8qor1" class="article-share-link">Teilen</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/06/console/">console</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/02/24/status/" class="archive-article-date">
-  <time datetime="2018-02-24T08:34:07.000Z" itemprop="datePublished">Feb 24</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/24/status/">status</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/02/23/test/" class="archive-article-date">
-  <time datetime="2018-02-23T06:19:17.000Z" itemprop="datePublished">Feb 23</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/02/23/test/">JavaSript模块化</a>
-    </h1>
+    <a href="/2018/06/26/loader/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          loader
+        
+      </div>
+    </a>
   
+  
+    <a href="/2018/03/26/PS1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">PS1</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         
