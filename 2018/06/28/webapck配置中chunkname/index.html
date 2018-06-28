@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://sangshaoye.github.io/2018/06/28/webapck配置中chunkname/index.html">
 <meta property="og:site_name" content="My Blogs">
 <meta property="og:description" content="webapck配置中chunkname是做什么的？ author：桑景瑞">
-<meta property="og:updated_time" content="2018-06-28T03:58:17.493Z">
+<meta property="og:updated_time" content="2018-06-28T04:00:54.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack">
 <meta name="twitter:description" content="webapck配置中chunkname是做什么的？ author：桑景瑞">
@@ -59,7 +59,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sangshaoye.github.io"></form>
@@ -96,12 +96,12 @@
 <p>{<br>    entry: {<br>        “index”: “pages/index.jsx”<br>    },<br>    output: {<br>        filename: “[name].min.js”,<br>        chunkFilename: “[name].min.js”<br>    }<br>}<br>生成出来的文件名为index.min.js。</p>
 <p>chunkname我的理解是未被列在entry中，却又需要被打包出来的文件命名配置。什么场景需要呢？我们项目就遇到过，在按需加载（异步）模块的时候，这样的文件是没有被列在entry中的，如使用CommonJS的方式异步加载模块：</p>
 <p>require.ensure([“modules/tips.jsx”], function(require) {<br>    var a = require(“modules/tips.jsx”);<br>    // …<br>}, ‘tips’);<br>异步加载的模块是要以文件形式加载哦，所以这时生成的文件名是以chunkname配置的，生成出的文件名就是tips.min.js。</p>
-<p>（require.ensure() API的第三个参数是给这个模块命名，否则 chunkFilename: “[name].min.js” 中的 [name] 是一个自动分配的、可读性很差的id，这是我在文档很不起眼的地方2.2K发现的。。。）</p>
+<p>require.ensure() API的第三个参数是给这个模块命名，否则 chunkFilename: “[name].min.js” 中的 [name] 是一个自动分配的、可读性很差的id。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sangshaoye.github.io/2018/06/28/webapck配置中chunkname/" data-id="cjiy0r9fx000010551owaiyeu" class="article-share-link">Teilen</a>
+      <a data-url="https://sangshaoye.github.io/2018/06/28/webapck配置中chunkname/" data-id="cjiy0r9fx000010551owaiyeu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
@@ -114,7 +114,7 @@
   
   
     <a href="/2018/03/26/PS1/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">PS1</div>
     </a>
   
@@ -151,7 +151,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
@@ -161,7 +161,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
