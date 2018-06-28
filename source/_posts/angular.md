@@ -10,3 +10,4 @@ author：桑景瑞
 <!-- more -->
 
 本次项目使用angular1.7.0版本。
+webpack 为 2 版本
