@@ -4,7 +4,7 @@ date: 2018-05-19 12:22:07
 tags: angular
 ---
 
-angular项目搭建，webpack，angular，路由，全局变量，控制器与模板模块化
+$http服务允许我们与服务端交互，有时候我们希望在发出请求之前以及收到响应之后做些事情。即http拦截。
 
 author：桑景瑞
 <!-- more -->
