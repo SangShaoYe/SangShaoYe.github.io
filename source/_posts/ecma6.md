@@ -96,7 +96,8 @@ var roadPoem = `Then took the other, as just as fair,
 var fourAgreements = `You have the right to be you.n  
     You can only be you when you do your best.`;
 ```
-
+  
+  
 ++优点：直接一个反引号，将所有的字符串放进去即可，中介随意换行，清爽简洁（vue里面的template就这么用）++
 
 ####  4.Destructuring Assignment （解构赋值）
