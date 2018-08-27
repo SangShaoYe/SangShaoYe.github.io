@@ -54,6 +54,7 @@ module.rules 允许你在 webpack 配置中指定多个 loader。 这是展示 l
     ]
   }
 内联
+
 可以在 import 语句或任何等效于 "import" 的方式中指定 loader。使用 ! 将资源中的 loader 分开。分开的每个部分都相对于当前目录解析。
 
 import Styles from 'style-loader!css-loader?modules!./styles.css';
