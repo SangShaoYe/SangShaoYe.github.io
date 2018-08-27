@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://sangshaoye.github.io/2018/06/26/loader/index.html">
 <meta property="og:site_name" content="My Blogs">
 <meta property="og:description" content="webapck配置中loader是做什么的？ author：桑景瑞">
-<meta property="og:updated_time" content="2018-06-28T05:53:16.479Z">
+<meta property="og:updated_time" content="2018-08-27T06:44:32.828Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="loader">
 <meta name="twitter:description" content="webapck配置中loader是做什么的？ author：桑景瑞">
@@ -57,9 +57,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sangshaoye.github.io"></form>
@@ -98,7 +98,8 @@
 <p>webpack.config.js</p>
 <p>module.exports = {<br>  module: {<br>    rules: [<br>      { test: /.css$/, use: ‘css-loader’ },<br>      { test: /.ts$/, use: ‘ts-loader’ }<br>    ]<br>  }<br>};<br>使用 loader<br>在你的应用程序中，有三种使用 loader 的方式：</p>
 <p>配置（推荐）：在 webpack.config.js 文件中指定 loader。<br>内联：在每个 import 语句中显式指定 loader。<br>CLI：在 shell 命令中指定它们。<br>配置[Configuration]<br>module.rules 允许你在 webpack 配置中指定多个 loader。 这是展示 loader 的一种简明方式，并且有助于使代码变得简洁。同时让你对各个 loader 有个全局概览：</p>
-<p>  module: {<br>    rules: [<br>      {<br>        test: /.css$/,<br>        use: [<br>          { loader: ‘style-loader’ },<br>          {<br>            loader: ‘css-loader’,<br>            options: {<br>              modules: true<br>            }<br>          }<br>        ]<br>      }<br>    ]<br>  }<br>内联<br>可以在 import 语句或任何等效于 “import” 的方式中指定 loader。使用 ! 将资源中的 loader 分开。分开的每个部分都相对于当前目录解析。</p>
+<p>  module: {<br>    rules: [<br>      {<br>        test: /.css$/,<br>        use: [<br>          { loader: ‘style-loader’ },<br>          {<br>            loader: ‘css-loader’,<br>            options: {<br>              modules: true<br>            }<br>          }<br>        ]<br>      }<br>    ]<br>  }<br>内联</p>
+<p>可以在 import 语句或任何等效于 “import” 的方式中指定 loader。使用 ! 将资源中的 loader 分开。分开的每个部分都相对于当前目录解析。</p>
 <p>import Styles from ‘style-loader!css-loader?modules!./styles.css’;<br>通过前置所有规则及使用 !，可以对应覆盖到配置中的任意 loader。</p>
 <p>选项可以传递查询参数，例如 ?key=value&amp;foo=bar，或者一个 JSON 对象，例如 ?{“key”:”value”,”foo”:”bar”}。</p>
 <p>尽可能使用 module.rules，因为这样可以减少源码中的代码量，并且可以在出错时，更快地调试和定位 loader 中的问题。<br>CLI<br>你也可以通过 CLI 使用 loader：</p>
@@ -110,7 +111,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sangshaoye.github.io/2018/06/26/loader/" data-id="cjiy4w5dz0000xk553enizn3n" class="article-share-link">Teilen</a>
+      <a data-url="https://sangshaoye.github.io/2018/06/26/loader/" data-id="cjiy4w5dz0000xk553enizn3n" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
@@ -122,7 +123,7 @@
 <nav id="article-nav">
   
     <a href="/2018/06/28/webapck配置中chunkname/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
+      <strong class="article-nav-caption">Récent</strong>
       <div class="article-nav-title">
         
           chunkname
@@ -132,7 +133,7 @@
   
   
     <a href="/2018/06/15/插件(plugins)/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
+      <strong class="article-nav-caption">Ancien</strong>
       <div class="article-nav-title">plugins</div>
     </a>
   
@@ -150,7 +151,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JAVA/">JAVA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSript/">JavaSript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LIUNX/">LIUNX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NGINX/">NGINX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端日常问题/">前端日常问题</a></li></ul>
     </div>
@@ -160,7 +161,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/JAVA/" style="font-size: 10px;">JAVA</a> <a href="/tags/JavaSript/" style="font-size: 20px;">JavaSript</a> <a href="/tags/LIUNX/" style="font-size: 13.33px;">LIUNX</a> <a href="/tags/NGINX/" style="font-size: 10px;">NGINX</a> <a href="/tags/angular/" style="font-size: 13.33px;">angular</a> <a href="/tags/webpack/" style="font-size: 16.67px;">webpack</a> <a href="/tags/前端日常问题/" style="font-size: 10px;">前端日常问题</a>
     </div>
@@ -169,7 +170,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
@@ -179,7 +180,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -216,7 +217,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2018 SangJingRui<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé par <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
