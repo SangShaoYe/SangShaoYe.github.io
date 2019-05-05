@@ -12,6 +12,9 @@ author：桑景瑞
 
 hexo史上最全搭建教程
 
+
+花了几天搭建了个网站，先上链接，欢迎来访：fangzh的个人博客
+
 现在市面上的博客很多，如CSDN，博客园，简书等平台，可以直接在上面发表，用户交互做的好，写的文章百度也能搜索的到。缺点是比较不自由，会受到平台的各种限制和恶心的广告。
 
 而自己购买域名和服务器，搭建博客的成本实在是太高了，不光是说这些购买成本，单单是花力气去自己搭这么一个网站，还要定期的维护它，对于我们大多数人来说，实在是没有这样的精力和时间。
@@ -48,8 +51,12 @@ windows：到git官网上下载,Download git,下载后会有一个Git Bash的命
 
 linux：对linux来说实在是太简单了，因为最早的git就是在linux上编写的，只需要一行代码
 
+
+```
 sudo apt-get install git
-1
+```
+
+
 安装好后，用git --version 来查看一下版本
 
 2. 安装nodejs
@@ -59,16 +66,22 @@ windows：nodejs选择LTS版本就行了。
 
 linux：
 
+
+```
 sudo apt-get install nodejs
 sudo apt-get install npm
-1
-2
+```
+
+
 安装完后，打开命令行
 
+
+```
 node -v
 npm -v
-1
-2
+```
+
+
 检查一下有没有安装成功
 
 顺便说一下，windows在git安装完后，就可以直接使用git bash来敲命令行了，不用自带的cmd，cmd有点难用。
@@ -78,22 +91,33 @@ npm -v
 
 输入命令
 
+
+```
 npm install -g hexo-cli
-1
+```
+
+
 依旧用hexo -v查看一下版本
 
 至此就全部安装完了。
 
 接下来初始化一下hexo
 
+
+```
 hexo init myblog
-1
+```
+
+
 这个myblog可以自己取什么名字都行，然后
 
+
+```
 cd myblog //进入这个myblog文件夹
 npm install
-1
-2
+```
+
+
 新建完成后，指定文件夹目录下有：
 
 node_modules: 依赖包
@@ -102,10 +126,13 @@ scaffolds：生成文章的一些模板
 source：用来存放你的文章
 themes：主题
 ** _config.yml: 博客的配置文件**
+
+```
 hexo g
 hexo server
-1
-2
+```
+
+
 打开hexo的服务，在浏览器输入localhost:4000就可以看到你生成的博客了。
 
 大概长这样：
@@ -127,22 +154,32 @@ hexo server
 5. 生成SSH添加到GitHub
 回到你的git bash中，
 
+
+```
 git config --global user.name "yourname"
 git config --global user.email "youremail"
-1
-2
+```
+
+
 这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。
 
 可以用以下两条，检查一下你有没有输对
 
+
+```
 git config user.name
 git config user.email
-1
-2
+```
+
+
 然后创建SSH,一路回车
 
+
+```
 ssh-keygen -t rsa -C "youremail"
-1
+```
+
+
 这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。
 
 
@@ -156,32 +193,43 @@ ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的�
 
 在gitbash中，查看是否成功
 
+
+```
 ssh -T git@github.com
-1
+```
+
+
 6. 将hexo部署到GitHub
 这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为
 YourgithubName就是你的GitHub账户
 
+
+```
 deploy:
   type: git
   repo: https://github.com/YourgithubName/YourgithubName.github.io.git
   branch: master
-1
-2
-3
-4
+```
+
+
 这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。
 
+
+```
 npm install hexo-deployer-git --save
-1
+```
+
+
 然后
 
+
+```
 hexo clean
 hexo generate
 hexo deploy
-1
-2
-3
+```
+
+
 其中 hexo clean清除了你之前生成的东西，也可以不加。
 hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写
 hexo deploy 部署文章，可以用hexo d缩写
@@ -217,26 +265,34 @@ hexo deploy 部署文章，可以用hexo d缩写
 
 最后，在gitbash中，输入
 
+
+```
 hexo clean
 hexo g
 hexo d
-1
-2
-3
+```
+
+
 过不了多久，再打开你的浏览器，输入你自己的域名，就可以看到搭建的网站啦！
 
 接下来你就可以正式开始写文章了。
 
+
+```
 hexo new newpapername
-1
+```
+
+
 然后在source/_post中打开markdown文件，就可以开始编辑了。当你写完的时候，再
 
+
+```
 hexo clean
 hexo g
 hexo d
-1
-2
-3
+```
+
+
 就可以看到更新了。
 
 第二部分
@@ -275,6 +331,8 @@ permalink，也就是你生成某个文章时的那个链接格式。
 :category/:title	foo/bar/hello-world
 再往下翻，中间这些都默认就好了。
 
+
+```
 theme: landscape
 
 # Deployment
@@ -283,16 +341,10 @@ deploy:
   type: git
   repo: <repository url>
   branch: [branch]
+```
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
+
+
 theme就是选择什么主题，也就是在theme这个文件夹下，在官网上有很多个主题，默认给你安装的是lanscape这个主题。当你需要更换主题时，在官网上下载，把主题的文件放在theme文件夹下，再修改这个参数就可以了。
 
 接下来这个deploy就是网站的部署的，repo就是仓库(Repository)的简写。branch选择仓库的哪个分支。这个在之前进行github page部署的时候已经修改过了，不再赘述。而这个在后面进行双平台部署的时候会再次用到。
@@ -300,12 +352,14 @@ theme就是选择什么主题，也就是在theme这个文件夹下，在官网�
 Front-matter
 Front-matter 是文件最上方以 --- 分隔的区域，用于指定个别文件的变量，举例来说：
 
+
+```
 title: Hello World
 date: 2013/7/13 20:46:25
 ---
-1
-2
-3
+```
+
+
 下是预先定义的参数，您可在模板中使用这些参数值并加以利用。
 
 参数	描述
@@ -319,21 +373,25 @@ categories	分类（不适用于分页）
 permalink	覆盖文章网址
 其中，分类和标签需要区别一下，分类具有顺序性和层次性，也就是说 Foo, Bar 不等于 Bar, Foo；而标签没有顺序和层次。
 
+
+```
 categories:
 - Diary
 tags:
 - PS3
 - Games
-1
-2
-3
-4
-5
+```
+
+
 layout（布局）
 当你每一次使用代码
 
+
+```
 hexo new paper
-1
+```
+
+
 它其实默认使用的是post这个布局，也就是在source文件夹下的_post里面。
 
 Hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。
@@ -344,32 +402,52 @@ page	source
 draft	source/_drafts
 而new这个命令其实是：
 
+
+```
 hexo new [layout] <title>
-1
+```
+
+
 只不过这个layout默认是post罢了。
 
 page
 如果你想另起一页，那么可以使用
 
+
+```
 hexo new page board
-1
+```
+
+
 系统会自动给你在source文件夹下创建一个board文件夹，以及board文件夹中的index.md，这样你访问的board对应的链接就是http://xxx.xxx/board
 
 draft
 draft是草稿的意思，也就是你如果想写文章，又不希望被看到，那么可以
 
+
+```
 hexo new draft newpage
-1
+```
+
+
 这样会在source/_draft中新建一个newpage.md文件，如果你的草稿文件写的过程中，想要预览一下，那么可以使用
 
+
+```
 hexo server --draft
-1
+```
+
+
 在本地端口中开启服务预览。
 
 如果你的草稿文件写完了，想要发表到post中，
 
+
+```
 hexo publish draft newpage
-1
+```
+
+
 就会自动把newpage.md发送到post中。
 
 2. 更换主题
@@ -394,14 +472,22 @@ menu（菜单栏）
 
 其中，About这个你是找不到网页的，因为你的文章中没有about这个东西。如果你想要的话，可以执行命令
 
+
+```
 hexo new page about
-1
+```
+
+
 它就会在根目录下source文件夹中新建了一个about文件夹，以及index.md，在index.md中写上你想要写的东西，就可以在网站上展示出来了。
 
 如果你想要自己再自定义一个菜单栏的选项，那么就
 
+
+```
 hexo new page yourdiy
-1
+```
+
+
 然后在主题配置文件的menu菜单栏添加一个 Yourdiy : /yourdiy，注意冒号后面要有空格，以及前面的空格要和menu中默认的保持整齐。然后在languages文件夹中，找到zh-CN.yml，在index中添加yourdiy: '中文意思'就可以显示中文了。
 
 customize(定制)
@@ -430,10 +516,16 @@ RSS也就是订阅功能，你可以理解为类似与订阅公众号的功能�
 
 先安装RSS插件
 
+
+```
 npm i hexo-generator-feed
-1
+```
+
+
 而后在你整个项目的_config.yml中找到Extensions，添加：
 
+
+```
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 #RSS订阅
@@ -444,22 +536,19 @@ feed:
   type: atom
   path: atom.xml
   limit: 20
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
+```
+
+
 这个时候你的RSS链接就是 域名/atom.xml了。
 
 所以，在主题配置文件中的这个social links，开启RSS的页面功能，这样你网站上就有那个像wifi一样符号的RSS logo了，注意空格。
 
+
+```
 rss: /atom.xml
-1
+```
+
+
 4. 如何关注RSS？
 
 首先，你需要一个RSS阅读器，在这里我推荐inoreader，宇宙第一RSS阅读器，而且中文支持的挺好。不过它没有PC端的程序，只有网页版，chrome上有插件。在官网上用google账号或者自己注册账号登录，就可以开始你的关注之旅了。
