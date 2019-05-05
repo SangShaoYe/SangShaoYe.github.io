@@ -5,19 +5,14 @@
   
 
   
-  <title>chunkname | My Blogs</title>
+  <title>Archives: 2019 | My Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="webapck配置中chunkname是做什么的？ author：桑景瑞">
-<meta name="keywords" content="webpack">
-<meta property="og:type" content="article">
-<meta property="og:title" content="chunkname">
-<meta property="og:url" content="https://sangshaoye.github.io/2018/06/28/webapck配置中chunkname/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="My Blogs">
+<meta property="og:url" content="https://sangshaoye.github.io/archives/2019/index.html">
 <meta property="og:site_name" content="My Blogs">
-<meta property="og:description" content="webapck配置中chunkname是做什么的？ author：桑景瑞">
-<meta property="og:updated_time" content="2018-06-28T05:52:46.926Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="chunkname">
-<meta name="twitter:description" content="webapck配置中chunkname是做什么的？ author：桑景瑞">
+<meta name="twitter:title" content="My Blogs">
   
     <link rel="alternate" href="/atom.xml" title="My Blogs" type="application/atom+xml">
   
@@ -68,69 +63,40 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-webapck配置中chunkname" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/06/28/webapck配置中chunkname/" class="article-date">
-  <time datetime="2018-06-28T03:45:09.000Z" itemprop="datePublished">2018-06-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      chunkname
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2019/05/05/hexo史上最全搭建教程/" class="archive-article-date">
+  <time datetime="2019-05-05T03:13:09.000Z" itemprop="datePublished">May 5</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/05/05/hexo史上最全搭建教程/">hexo史上最全搭建教程</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>webapck配置中chunkname是做什么的？</p>
-<p>author：桑景瑞<br><a id="more"></a></p>
-<p>filename应该比较好理解，就是对应于entry里面生成出来的文件名。比如：</p>
-<p>{<br>    entry: {<br>        “index”: “pages/index.jsx”<br>    },<br>    output: {<br>        filename: “[name].min.js”,<br>        chunkFilename: “[name].min.js”<br>    }<br>}<br>生成出来的文件名为index.min.js。</p>
-<p>chunkname我的理解是未被列在entry中，却又需要被打包出来的文件命名配置。什么场景需要呢？我们项目就遇到过，在按需加载（异步）模块的时候，这样的文件是没有被列在entry中的，如使用CommonJS的方式异步加载模块：</p>
-<p>require.ensure([“modules/tips.jsx”], function(require) {<br>    var a = require(“modules/tips.jsx”);<br>    // …<br>}, ‘tips’);<br>异步加载的模块是要以文件形式加载哦，所以这时生成的文件名是以chunkname配置的，生成出的文件名就是tips.min.js。</p>
-<p>require.ensure() API的第三个参数是给这个模块命名，否则 chunkFilename: “[name].min.js” 中的 [name] 是一个自动分配的、可读性很差的id。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sangshaoye.github.io/2018/06/28/webapck配置中chunkname/" data-id="cjiy0r9fx000010551owaiyeu" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/07/16/webapck/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          webpack
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/06/26/loader/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">loader</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
+
 
 </section>
         
