@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://sangshaoye.github.io/2019/05/05/hexo史上最全搭建教程/index.html">
 <meta property="og:site_name" content="My Blogs">
 <meta property="og:description" content="Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。 author：桑景瑞">
-<meta property="og:updated_time" content="2019-05-05T03:13:54.030Z">
+<meta property="og:updated_time" content="2019-05-05T03:20:16.736Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo史上最全搭建教程">
 <meta name="twitter:description" content="Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。 author：桑景瑞">
@@ -59,7 +59,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sangshaoye.github.io"></form>
@@ -93,6 +93,7 @@
         <p>Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。大家可以进入hexo官网进行详细查看，因为Hexo的创建者是台湾人，对中文的支持很友好，可以选择中文进行查看。</p>
 <p>author：桑景瑞<br><a id="more"></a></p>
 <p>hexo史上最全搭建教程</p>
+<p>花了几天搭建了个网站，先上链接，欢迎来访：fangzh的个人博客</p>
 <p>现在市面上的博客很多，如CSDN，博客园，简书等平台，可以直接在上面发表，用户交互做的好，写的文章百度也能搜索的到。缺点是比较不自由，会受到平台的各种限制和恶心的广告。</p>
 <p>而自己购买域名和服务器，搭建博客的成本实在是太高了，不光是说这些购买成本，单单是花力气去自己搭这么一个网站，还要定期的维护它，对于我们大多数人来说，实在是没有这样的精力和时间。</p>
 <p>那么就有第三种选择，直接在github page平台上托管我们的博客。这样就可以安心的来写作，又不需要定期维护，而且hexo作为一个快速简洁的博客框架，用它来搭建博客真的非常容易。</p>
@@ -106,25 +107,33 @@
 </ol>
 <p>windows：到git官网上下载,Download git,下载后会有一个Git Bash的命令行工具，以后就用这个工具来使用git。</p>
 <p>linux：对linux来说实在是太简单了，因为最早的git就是在linux上编写的，只需要一行代码</p>
-<p>sudo apt-get install git<br>1<br>安装好后，用git –version 来查看一下版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
+<p>安装好后，用git –version 来查看一下版本</p>
 <ol>
 <li>安装nodejs<br>Hexo是基于nodeJS编写的，所以需要安装一下nodeJs和里面的npm工具。</li>
 </ol>
 <p>windows：nodejs选择LTS版本就行了。</p>
 <p>linux：</p>
-<p>sudo apt-get install nodejs<br>sudo apt-get install npm<br>1<br>2<br>安装完后，打开命令行</p>
-<p>node -v<br>npm -v<br>1<br>2<br>检查一下有没有安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nodejs</span><br><span class="line">sudo apt-get install npm</span><br></pre></td></tr></table></figure>
+<p>安装完后，打开命令行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>检查一下有没有安装成功</p>
 <p>顺便说一下，windows在git安装完后，就可以直接使用git bash来敲命令行了，不用自带的cmd，cmd有点难用。</p>
 <ol>
 <li>安装hexo<br>前面git和nodejs安装好后，就可以安装hexo了，你可以先创建一个文件夹blog，然后cd到这个文件夹下（或者在这个文件夹下直接右键git bash打开）。</li>
 </ol>
 <p>输入命令</p>
-<p>npm install -g hexo-cli<br>1<br>依旧用hexo -v查看一下版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>依旧用hexo -v查看一下版本</p>
 <p>至此就全部安装完了。</p>
 <p>接下来初始化一下hexo</p>
-<p>hexo init myblog<br>1<br>这个myblog可以自己取什么名字都行，然后</p>
-<p>cd myblog //进入这个myblog文件夹<br>npm install<br>1<br>2<br>新建完成后，指定文件夹目录下有：</p>
-<p>node_modules: 依赖包<br>public：存放生成的页面<br>scaffolds：生成文章的一些模板<br>source：用来存放你的文章<br>themes：主题<br><strong> _config.yml: 博客的配置文件</strong><br>hexo g<br>hexo server<br>1<br>2<br>打开hexo的服务，在浏览器输入localhost:4000就可以看到你生成的博客了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myblog</span><br></pre></td></tr></table></figure>
+<p>这个myblog可以自己取什么名字都行，然后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd myblog //进入这个myblog文件夹</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>新建完成后，指定文件夹目录下有：</p>
+<p>node_modules: 依赖包<br>public：存放生成的页面<br>scaffolds：生成文章的一些模板<br>source：用来存放你的文章<br>themes：主题<br><strong> _config.yml: 博客的配置文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>打开hexo的服务，在浏览器输入localhost:4000就可以看到你生成的博客了。</p>
 <p>大概长这样：</p>
 <p>使用ctrl+c可以把服务关掉。</p>
 <ol>
@@ -136,20 +145,26 @@
 <ol>
 <li>生成SSH添加到GitHub<br>回到你的git bash中，</li>
 </ol>
-<p>git config –global user.name “yourname”<br>git config –global user.email “youremail”<br>1<br>2<br>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p>这里的yourname输入你的GitHub用户名，youremail输入你GitHub的邮箱。这样GitHub才能知道你是不是对应它的账户。</p>
 <p>可以用以下两条，检查一下你有没有输对</p>
-<p>git config user.name<br>git config user.email<br>1<br>2<br>然后创建SSH,一路回车</p>
-<p>ssh-keygen -t rsa -C “youremail”<br>1<br>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+<p>然后创建SSH,一路回车</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p>这个时候它会告诉你已经生成了.ssh的文件夹。在你的电脑中找到这个文件夹。</p>
 <p>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
 <p>而后在GitHub的setting中，找到SSH keys的设置选项，点击New SSH key<br>把你的id_rsa.pub里面的信息复制进去。</p>
 <p>在gitbash中，查看是否成功</p>
-<p>ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a><br>1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <ol>
 <li>将hexo部署到GitHub<br>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 _config.yml，翻到最后，修改为<br>YourgithubName就是你的GitHub账户</li>
 </ol>
-<p>deploy:<br>  type: git<br>  repo: <a href="https://github.com/YourgithubName/YourgithubName.github.io.git" target="_blank" rel="noopener">https://github.com/YourgithubName/YourgithubName.github.io.git</a><br>  branch: master<br>1<br>2<br>3<br>4<br>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
-<p>npm install hexo-deployer-git –save<br>1<br>然后</p>
-<p>hexo clean<br>hexo generate<br>hexo deploy<br>1<br>2<br>3<br>其中 hexo clean清除了你之前生成的东西，也可以不加。<br>hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写<br>hexo deploy 部署文章，可以用hexo d缩写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>然后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>其中 hexo clean清除了你之前生成的东西，也可以不加。<br>hexo generate 顾名思义，生成静态文章，可以用 hexo g缩写<br>hexo deploy 部署文章，可以用hexo d缩写</p>
 <p>注意deploy时可能要你输入username和password。</p>
 <p>得到下图就说明部署成功了，过一会儿就可以在<a href="http://yourname.github.io" target="_blank" rel="noopener">http://yourname.github.io</a> 这个网站看到你的博客了！！</p>
 <ol>
@@ -162,10 +177,13 @@
 <p>登录GitHub，进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名fangzh.top</p>
 <p>然后在你的博客文件source中创建一个名为CNAME文件，不要后缀。写上你的域名。</p>
 <p>最后，在gitbash中，输入</p>
-<p>hexo clean<br>hexo g<br>hexo d<br>1<br>2<br>3<br>过不了多久，再打开你的浏览器，输入你自己的域名，就可以看到搭建的网站啦！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>过不了多久，再打开你的浏览器，输入你自己的域名，就可以看到搭建的网站啦！</p>
 <p>接下来你就可以正式开始写文章了。</p>
-<p>hexo new newpapername<br>1<br>然后在source/_post中打开markdown文件，就可以开始编辑了。当你写完的时候，再</p>
-<p>hexo clean<br>hexo g<br>hexo d<br>1<br>2<br>3<br>就可以看到更新了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new newpapername</span><br></pre></td></tr></table></figure>
+<p>然后在source/_post中打开markdown文件，就可以开始编辑了。当你写完的时候，再</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>就可以看到更新了。</p>
 <p>第二部分<br>hexo的基本配置，更换主题，实现多终端工作，以及在coding page部署实现国内外分流。</p>
 <ol>
 <li>hexo基本配置<br>在文件根目录下的_config.yml，就是整个hexo框架的配置文件了。可以在里面修改大部分的配置。详细可参考官方的配置描述。</li>
@@ -176,31 +194,32 @@
 <p>比如我新建一个文章叫temp.md，那么这个时候他自动生成的地址就是<a href="http://yoursite.com/2018/09/05/temp。" target="_blank" rel="noopener">http://yoursite.com/2018/09/05/temp。</a></p>
 <p>以下是官方给出的示例，关于链接的变量还有很多，需要的可以去官网上查找 永久链接 。</p>
 <p>参数    结果<br>:year/:month/:day/:title/    2013/07/14/hello-world<br>:year-:month-:day-:title.html    2013-07-14-hello-world.html<br>:category/:title    foo/bar/hello-world<br>再往下翻，中间这些都默认就好了。</p>
-<p>theme: landscape</p>
-<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a></h2><p>deploy:<br>  type: git<br>  repo: <repository url=""><br>  branch: [branch]</repository></p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>theme就是选择什么主题，也就是在theme这个文件夹下，在官网上有很多个主题，默认给你安装的是lanscape这个主题。当你需要更换主题时，在官网上下载，把主题的文件放在theme文件夹下，再修改这个参数就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">theme: landscape</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br></pre></td></tr></table></figure>
+<p>theme就是选择什么主题，也就是在theme这个文件夹下，在官网上有很多个主题，默认给你安装的是lanscape这个主题。当你需要更换主题时，在官网上下载，把主题的文件放在theme文件夹下，再修改这个参数就可以了。</p>
 <p>接下来这个deploy就是网站的部署的，repo就是仓库(Repository)的简写。branch选择仓库的哪个分支。这个在之前进行github page部署的时候已经修改过了，不再赘述。而这个在后面进行双平台部署的时候会再次用到。</p>
 <p>Front-matter<br>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，举例来说：</p>
-<p>title: Hello World</p>
-<h2 id="date-2013-7-13-20-46-25"><a href="#date-2013-7-13-20-46-25" class="headerlink" title="date: 2013/7/13 20:46:25"></a>date: 2013/7/13 20:46:25</h2><p>1<br>2<br>3<br>下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>下是预先定义的参数，您可在模板中使用这些参数值并加以利用。</p>
 <p>参数    描述<br>layout    布局<br>title    标题<br>date    建立日期<br>updated    更新日期<br>comments    开启文章的评论功能<br>tags    标签（不适用于分页）<br>categories    分类（不适用于分页）<br>permalink    覆盖文章网址<br>其中，分类和标签需要区别一下，分类具有顺序性和层次性，也就是说 Foo, Bar 不等于 Bar, Foo；而标签没有顺序和层次。</p>
-<p>categories:</p>
-<ul>
-<li>Diary<br>tags:</li>
-<li>PS3</li>
-<li>Games<br>1<br>2<br>3<br>4<br>5<br>layout（布局）<br>当你每一次使用代码</li>
-</ul>
-<p>hexo new paper<br>1<br>它其实默认使用的是post这个布局，也就是在source文件夹下的_post里面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">- Diary</span><br><span class="line">tags:</span><br><span class="line">- PS3</span><br><span class="line">- Games</span><br></pre></td></tr></table></figure>
+<p>layout（布局）<br>当你每一次使用代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new paper</span><br></pre></td></tr></table></figure>
+<p>它其实默认使用的是post这个布局，也就是在source文件夹下的_post里面。</p>
 <p>Hexo 有三种默认布局：post、page 和 draft，它们分别对应不同的路径，而您自定义的其他布局和 post 相同，都将储存到 source/_posts 文件夹。</p>
 <p>布局    路径<br>post    source/_posts<br>page    source<br>draft    source/_drafts<br>而new这个命令其实是：</p>
-<p>hexo new [layout] <title><br>1<br>只不过这个layout默认是post罢了。</title></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>只不过这个layout默认是post罢了。</p>
 <p>page<br>如果你想另起一页，那么可以使用</p>
-<p>hexo new page board<br>1<br>系统会自动给你在source文件夹下创建一个board文件夹，以及board文件夹中的index.md，这样你访问的board对应的链接就是<a href="http://xxx.xxx/board" target="_blank" rel="noopener">http://xxx.xxx/board</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page board</span><br></pre></td></tr></table></figure>
+<p>系统会自动给你在source文件夹下创建一个board文件夹，以及board文件夹中的index.md，这样你访问的board对应的链接就是<a href="http://xxx.xxx/board" target="_blank" rel="noopener">http://xxx.xxx/board</a></p>
 <p>draft<br>draft是草稿的意思，也就是你如果想写文章，又不希望被看到，那么可以</p>
-<p>hexo new draft newpage<br>1<br>这样会在source/_draft中新建一个newpage.md文件，如果你的草稿文件写的过程中，想要预览一下，那么可以使用</p>
-<p>hexo server –draft<br>1<br>在本地端口中开启服务预览。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft newpage</span><br></pre></td></tr></table></figure>
+<p>这样会在source/_draft中新建一个newpage.md文件，如果你的草稿文件写的过程中，想要预览一下，那么可以使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure>
+<p>在本地端口中开启服务预览。</p>
 <p>如果你的草稿文件写完了，想要发表到post中，</p>
-<p>hexo publish draft newpage<br>1<br>就会自动把newpage.md发送到post中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish draft newpage</span><br></pre></td></tr></table></figure>
+<p>就会自动把newpage.md发送到post中。</p>
 <ol>
 <li>更换主题<br>到这一步，如果你觉得默认的landscape主题不好看，那么可以在官网的主题中，选择你喜欢的一个主题进行修改就可以啦。点这里</li>
 </ol>
@@ -210,9 +229,11 @@
 <p>而后进入hueman这个文件夹，可以看到里面也有一个配置文件_config.xml，貌似它默认是_config.xml.example，把它复制一份，重命名为_config.xml就可以了。这个配置文件是修改你整个主题的配置文件。</p>
 <p>menu（菜单栏）<br>也就是上面菜单栏上的这些东西。</p>
 <p>其中，About这个你是找不到网页的，因为你的文章中没有about这个东西。如果你想要的话，可以执行命令</p>
-<p>hexo new page about<br>1<br>它就会在根目录下source文件夹中新建了一个about文件夹，以及index.md，在index.md中写上你想要写的东西，就可以在网站上展示出来了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page about</span><br></pre></td></tr></table></figure>
+<p>它就会在根目录下source文件夹中新建了一个about文件夹，以及index.md，在index.md中写上你想要写的东西，就可以在网站上展示出来了。</p>
 <p>如果你想要自己再自定义一个菜单栏的选项，那么就</p>
-<p>hexo new page yourdiy<br>1<br>然后在主题配置文件的menu菜单栏添加一个 Yourdiy : /yourdiy，注意冒号后面要有空格，以及前面的空格要和menu中默认的保持整齐。然后在languages文件夹中，找到zh-CN.yml，在index中添加yourdiy: ‘中文意思’就可以显示中文了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page yourdiy</span><br></pre></td></tr></table></figure>
+<p>然后在主题配置文件的menu菜单栏添加一个 Yourdiy : /yourdiy，注意冒号后面要有空格，以及前面的空格要和menu中默认的保持整齐。然后在languages文件夹中，找到zh-CN.yml，在index中添加yourdiy: ‘中文意思’就可以显示中文了。</p>
 <p>customize(定制)<br>在这里可以修改你的个人logo，默认是那个hueman，在source/css/images文件夹中放入自己要的logo，再改一下url的链接名字就可以了。</p>
 <p>favicon是网站中出现的那个小图标的icon，找一张你喜欢的logo，然后转换成ico格式，放在images文件夹下，配置一下路径就行。</p>
 <p>social_links ，可以显示你的社交链接，而且是有logo的。</p>
@@ -232,13 +253,12 @@
 <li>添加RSS功能</li>
 </ol>
 <p>先安装RSS插件</p>
-<p>npm i hexo-generator-feed<br>1<br>而后在你整个项目的_config.yml中找到Extensions，添加：</p>
-<h1 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h1><h2 id="Plugins-https-hexo-io-plugins"><a href="#Plugins-https-hexo-io-plugins" class="headerlink" title="Plugins: https://hexo.io/plugins/"></a>Plugins: <a href="https://hexo.io/plugins/" target="_blank" rel="noopener">https://hexo.io/plugins/</a></h2><p>#RSS订阅<br>plugin:</p>
-<ul>
-<li>hexo-generator-feed<br>#Feed Atom<br>feed:<br>type: atom<br>path: atom.xml<br>limit: 20<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>这个时候你的RSS链接就是 域名/atom.xml了。</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-generator-feed</span><br></pre></td></tr></table></figure>
+<p>而后在你整个项目的_config.yml中找到Extensions，添加：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">#RSS订阅</span><br><span class="line">plugin:</span><br><span class="line">- hexo-generator-feed</span><br><span class="line">#Feed Atom</span><br><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br></pre></td></tr></table></figure>
+<p>这个时候你的RSS链接就是 域名/atom.xml了。</p>
 <p>所以，在主题配置文件中的这个social links，开启RSS的页面功能，这样你网站上就有那个像wifi一样符号的RSS logo了，注意空格。</p>
-<p>rss: /atom.xml<br>1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
 <ol>
 <li>如何关注RSS？</li>
 </ol>
@@ -412,7 +432,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sangshaoye.github.io/2019/05/05/hexo史上最全搭建教程/" data-id="cjvad41kc00009055t0g5rxvm" class="article-share-link">Share</a>
+      <a data-url="https://sangshaoye.github.io/2019/05/05/hexo史上最全搭建教程/" data-id="cjvad41kc00009055t0g5rxvm" class="article-share-link">Teilen</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -425,7 +445,7 @@
   
   
     <a href="/2018/07/16/webapck/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">webpack</div>
     </a>
   
@@ -462,7 +482,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
@@ -472,7 +492,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
